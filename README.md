@@ -1,4 +1,4 @@
-# FocusTraps
+# Focus Traps in Compose
 "Focus Traps" in TextFields usually fall into two categories: the Navigation Trap (where the Tab/Next key inserts whitespace instead of moving focus) and the Ghost Input Trap (where typing stops updating the UI).
 Based on the provided documentation, "Focus Traps" in TextFields usually fall into two categories: the **Navigation Trap** (where the Tab/Next key inserts whitespace instead of moving focus) and the **Ghost Input Trap** (where typing stops updating the UI).
 
@@ -84,3 +84,4 @@ Dialog(onDismissRequest = { /*...*/ }) {
 | **Tab Consumption** | Pressing Tab adds space; cursor doesn't move. | Set `singleLine = true` and `ImeAction.Next`. |
 | **Ghost Typing** | Keyboard types but text field stays empty. | Migrate to `TextFieldState` or ensure `onValueChange` updates state immediately,. |
 | **Modal Trap** | Keyboard navigation stuck in background. | Use `LaunchedEffect` to `requestFocus` inside the Dialog content. |
+
